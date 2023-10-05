@@ -1,7 +1,7 @@
 string = input()
+string += ' '
 result = ""
-k = ''
-for i in range(len(string)-1):
+for i in range(len(string)):
     if string[i] == ' ':
         result += string[i-1]
 print(result)
