@@ -1,7 +1,9 @@
 sequence = input()
-sequence.replace(' ', '')
-for i in range(len(sequence)-1):
+flag = False
+for i in range(len(sequence)):
     for j in range(len(sequence)):
-        print(sequence[i] == sequence[j])
-        break
-    break
+        if i != j:
+            if sequence[i] == sequence[j] and sequence[i] != " ":
+                flag = True
+                break
+print(flag)
