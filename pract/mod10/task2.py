@@ -47,6 +47,8 @@ def check(date):
             return False
         if re.search(r'(?:31-(?:0?[469]|11))|(?:30-0?2)', date):
             return False
+        if re.search(r'(?:0?2)[-/](?:30|31)', date):
+            return False
         return True
     else:
         return False
